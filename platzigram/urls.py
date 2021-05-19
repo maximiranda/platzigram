@@ -1,10 +1,9 @@
 from django.http import HttpResponse, request
 from django.contrib import admin
 from django.urls import path
+from platzigram import views
 
-def hello_world(request):
-    return HttpResponse("Hello, Worl!")    
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("helloworld", hello_world),
+    path("hello_world", views.hello_world),
+    path("orden", views.ordenada),
 ]
